@@ -1,16 +1,61 @@
 <template>
   <div id="app">
-    <bg-button>这是按钮</bg-button>
-    <bg-button type="primary" icon="sousuo" icon-position="left">这是按钮</bg-button>
-    <bg-button type="primary" icon="sousuo" icon-position="right" @click="click">000101</bg-button>
-    <bg-button type="warning">这是按钮</bg-button>
-    <bg-button-group>
-      <bg-button type="danger">0202</bg-button>
-      <bg-button type="danger">0303</bg-button>
-    </bg-button-group>
-    <bg-button type="info1">info1</bg-button>
-    <bg-button type="info" icon="loading">info1</bg-button>
-    <bg-icon icon="sousuo"></bg-icon>
+    <bg-row>
+      <bg-col :span="12">
+        <div style="background: red">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="12">
+        <div style="background: blue">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+    </bg-row>
+    <bg-row :gutter="60">
+      <bg-col :span="6">
+        <div style="background: red">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="6">
+        <div style="background: blue">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="6" >
+        <div style="background: red">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="6">
+        <div style="background: blue">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+    </bg-row>
+    <bg-row>
+      <bg-col :span="4">
+        <div style="background: red">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="4" :offset="2">
+        <div style="background: blue">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="6" >
+        <div style="background: red">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+      <bg-col :span="6">
+        <div style="background: blue">
+          <bg-button type="success">这是按钮</bg-button>
+        </div>
+      </bg-col>
+    </bg-row>
   </div>
 </template>
 
