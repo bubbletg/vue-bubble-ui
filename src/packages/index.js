@@ -8,6 +8,7 @@ import Container from './container/container.vue'
 import Footer from './container/footer.vue'
 import Main from './container/main.vue'
 import Header from './container/header.vue'
+import Input from './input.vue';
 
 const install = (Vue) => {
   Vue.component(Button.name, Button);
@@ -20,6 +21,7 @@ const install = (Vue) => {
   Vue.component(Header.name, Header);
   Vue.component(Footer.name, Footer);
   Vue.component(Main.name, Main);
+  Vue.component(Input.name, Input);
 
 };
 
