@@ -33,6 +33,16 @@ $map: (
     @content; // 插槽
   }
 }
+// @include res(xl) {
+//   @for $i from 1 through 24 {
+//     .bg-col-xl-#{$i} {
+//       width: $i/24 * 100%;
+//     }
+//     .bg-col-xl-offset-#{$i} {
+//       margin-left: $i/24 * 100%;
+//     }
+//   }
+// }
 
 * {
   padding: 0;

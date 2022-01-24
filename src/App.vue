@@ -1,61 +1,56 @@
 <template>
-  <div id="app">
-    <bg-row>
-      <bg-col :span="12">
-        <div style="background: red">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="12">
-        <div style="background: blue">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-    </bg-row>
-    <bg-row :gutter="60">
-      <bg-col :span="6">
-        <div style="background: red">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="6">
-        <div style="background: blue">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="6" >
-        <div style="background: red">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="6">
-        <div style="background: blue">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-    </bg-row>
-    <bg-row>
-      <bg-col :span="4">
-        <div style="background: red">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="4" :offset="2">
-        <div style="background: blue">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="6" >
-        <div style="background: red">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-      <bg-col :span="6">
-        <div style="background: blue">
-          <bg-button type="success">这是按钮</bg-button>
-        </div>
-      </bg-col>
-    </bg-row>
+  <div>
+    <bg-container>
+      <bg-header>Header</bg-header>
+      <bg-main>Main</bg-main>
+    </bg-container>
+
+    <bg-container>
+      <bg-header>Header</bg-header>
+      <bg-main>Main</bg-main>
+      <bg-footer>Footer</bg-footer>
+    </bg-container>
+
+    <bg-container>
+      <bg-aside width="200px">Aside</bg-aside>
+      <bg-main>Main</bg-main>
+    </bg-container>
+
+    <bg-container>
+      <bg-header>Header</bg-header>
+      <bg-container>
+        <bg-aside width="200px">Aside</bg-aside>
+        <bg-main>Main</bg-main>
+      </bg-container>
+    </bg-container>
+
+    <bg-container>
+      <bg-header>Header</bg-header>
+      <bg-container>
+        <bg-aside width="200px">Aside</bg-aside>
+        <bg-container>
+          <bg-main>Main</bg-main>
+          <bg-footer>Footer</bg-footer>
+        </bg-container>
+      </bg-container>
+    </bg-container>
+
+    <bg-container>
+      <bg-aside width="200px">Aside</bg-aside>
+      <bg-container>
+        <bg-header>Header</bg-header>
+        <bg-main>Main</bg-main>
+      </bg-container>
+    </bg-container>
+
+    <bg-container>
+      <bg-aside width="200px">Aside</bg-aside>
+      <bg-container>
+        <bg-header>Header</bg-header>
+        <bg-main>Main</bg-main>
+        <bg-footer>Footer</bg-footer>
+      </bg-container>
+    </bg-container>
   </div>
 </template>
 
@@ -70,4 +65,39 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style>
+.bg-header,
+.bg-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.bg-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.bg-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .bg-container {
+  margin-bottom: 40px;
+}
+
+.bg-container:nth-child(5) .bg-aside,
+.bg-container:nth-child(6) .bg-aside {
+  line-height: 260px;
+}
+
+.bg-container:nth-child(7) .bg-aside {
+  line-height: 320px;
+}
+</style>

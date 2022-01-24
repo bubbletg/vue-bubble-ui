@@ -3,6 +3,11 @@ import ButtonGroup from './button/button-group.vue';
 import Icon from './icon.vue';
 import Col from './layout/col.vue'
 import Row from './layout/row.vue'
+import Aside from './container/aside.vue'
+import Container from './container/container.vue'
+import Footer from './container/footer.vue'
+import Main from './container/main.vue'
+import Header from './container/header.vue'
 
 const install = (Vue) => {
   Vue.component(Button.name, Button);
@@ -10,6 +15,12 @@ const install = (Vue) => {
   Vue.component(Icon.name, Icon);
   Vue.component(Col.name, Col);
   Vue.component(Row.name, Row);
+  Vue.component(Aside.name, Aside);
+  Vue.component(Container.name, Container);
+  Vue.component(Header.name, Header);
+  Vue.component(Footer.name, Footer);
+  Vue.component(Main.name, Main);
+
 };
 
 if (typeof window.Vue !== 'undefined') {
